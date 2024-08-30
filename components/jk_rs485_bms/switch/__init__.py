@@ -168,4 +168,4 @@ async def to_code(config):
             # Ensure that the switch can write its state to the BMS
             # The key change here is ensuring that the switch's state changes are reflected by sending a command
             # Ensure write_state method is called when the switch is toggled
-            cg.add(var.write_state())
+            cg.add(var.write_state(conf[CONF_ID].state))
